@@ -4,9 +4,8 @@ define([
 	'backbone',
 	'marionette',
 	'routers/index',
-	'controllers/default',
 	'hbs!/app/views/templates/test'
-], function ($, Backbone, Marionette, Router, RouterController, template) {
+], function ($, Backbone, Marionette, Router, template) {
 	"use strict";
 
 	var App = new Backbone.Marionette.Application();
@@ -50,7 +49,7 @@ define([
 		// 	return Handlebars.compile(rawTemplate);
 		// };
 
-		var router = new Router({ controller: RouterController});
+		var router = new Router();
 		Backbone.history.start();
 	});
 

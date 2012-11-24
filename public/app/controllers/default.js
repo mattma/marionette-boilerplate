@@ -1,6 +1,8 @@
 /*global define*/
 
-define(function () {
+define([
+	'hbs!/app/views/templates/test'
+], function (template) {
 	"use strict";
 
 	var DefaultController = {
