@@ -1,11 +1,15 @@
-define(['backbone'],function(Backbone){
+define([
+	'backbone'
+],function(Backbone){
 	'use strict';
 
-	return Backbone.Model.extend({
+	var MyModel = Backbone.Model.extend({
 		defaults: {
 			firstName: 'Derick',
 			lastName: 'Bailey',
 			email: 'derickbailey@gmail.com'
 		}
 	});
+
+	return MyModel;
 });

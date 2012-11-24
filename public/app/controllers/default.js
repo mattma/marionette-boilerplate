@@ -8,6 +8,7 @@ define([
 	"use strict";
 
 	var DefaultController = {
+
 		default: function(param) {
 			var model = new MyModel();
 			var mainView = new MainView({ model: model });
