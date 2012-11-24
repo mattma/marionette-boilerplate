@@ -1,5 +1,3 @@
-/*global define*/
-
 define([
 	'application',
 	'text!../database_1.json',
@@ -11,12 +9,10 @@ define([
 	var DefaultController = {
 
 		default: function(param) {
-			var myCollection = new MyCollection();
-			var myCollectionView = new MyCollectionView({ collection: myCollection });
 
-			console.log( MyCollectionView );
+			var myCollectionView = new MyCollectionView({ collection: Database });
 
-			App.mainRegion.show( myCollectionView );
+			App.mainRegion.show( myCollectionView.render()  );
 		}
 	};
 
