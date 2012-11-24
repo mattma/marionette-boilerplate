@@ -2,16 +2,14 @@
 
 define([
 	'application',
+	'../models/index',
 	'../views/index'
-], function ( App, MainView ) {
+], function ( App, MyModel, MainView ) {
 	"use strict";
 
 	var DefaultController = {
 		default: function(param) {
-			var model = new Backbone.Model({
-				contentPlacement: "matt here"
-			});
-
+			var model = new MyModel();
 			var mainView = new MainView({ model: model });
 
 			App.mainRegion.show( mainView );

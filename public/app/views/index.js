@@ -1,7 +1,7 @@
 define([
 	'backbone',
 	'marionette',
-	'hbs!/app/views/templates/test'
+	'hbs!/app/views/templates/header'
 ], function (Backbone, Marionette, template) {
 	"use strict";
 
