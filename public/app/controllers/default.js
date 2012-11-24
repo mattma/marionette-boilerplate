@@ -1,13 +1,20 @@
 /*global define*/
 
 define([
-	'hbs!/app/views/templates/test'
-], function (template) {
+	'application',
+	'../views/index'
+], function ( App, MainView ) {
 	"use strict";
 
 	var DefaultController = {
 		default: function(param) {
-			console.log("matt ma starts");
+			var model = new Backbone.Model({
+				contentPlacement: "matt here"
+			});
+
+			var mainView = new MainView({ model: model });
+
+			App.mainRegion.show( mainView );
 		}
 	};
 

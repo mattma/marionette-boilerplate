@@ -1,15 +1,15 @@
-define(['backbone', 'marionette'], function (Backbone, Marionette) {
+define([
+	'backbone',
+	'marionette',
+	'hbs!/app/views/templates/test'
+], function (Backbone, Marionette, template) {
 	"use strict";
 
-	var MyView = Backbone.Marionette.ItemView.extend({
-		//template: Handlebars.compile(template),
-		template: '#content-template'
-
-		// initialize: function(){
-		// 	this.bindTo(this.model, 'change', this.render, this);
-		// }
+	// Define a view to show
+	var MainView = Backbone.Marionette.ItemView.extend({
+		template: template
 	});
 
-	return MyView;
+	return MainView;
 });
 

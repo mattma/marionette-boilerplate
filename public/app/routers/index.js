@@ -1,8 +1,8 @@
 define([
-	'marionette',
 	'backbone',
+	'marionette',
 	'../controllers/default'
-], function(Marionette, Backbone, DefaultController) {
+], function(Backbone, Marionette, DefaultController) {
 	'use strict';
 
 	var Router = Backbone.Marionette.AppRouter.extend({
