@@ -1,0 +1,27 @@
+{
+	"name": "application_name",
+	"description": "My Test project",
+	"author": {
+		"name": "Matt Ma",
+		"email": "matt@mattmadesign.com"
+	},
+
+	"version": "0.0.1",
+	"private": true,
+
+	"dependencies": {
+		"coffee-script": ">= 1.3.3",
+		"express": ">=3.0",
+		"jade": "*"
+	},
+
+	"scripts": {
+		"start": "./server.js"
+	},
+
+	"devDependencies": {},
+
+	"engines": {
+		"node": ">= 0.8.x"
+	}
+}
