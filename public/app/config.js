@@ -8,6 +8,7 @@ require.config({
 		'jquery'     : '/libs/jquery-1.8.3.min',
 		'i18nprecompile' : '/libs/hbs/i18nprecompile',
 		'hbs': '/libs/hbs',
+		'text': '../libs/text',
 		'application': 'application'
 	},
 	shim : {

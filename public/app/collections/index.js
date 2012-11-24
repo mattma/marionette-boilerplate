@@ -1,3 +1,12 @@
-define(['hbs!views/templates/header'], function (tmplOne) {
-	//console.log( tmplOne );
+define([
+	'backbone',
+	'../models/index'
+],function(Backbone, MyModel ){
+	'use strict';
+
+	var MyCollection = Backbone.Collection.extend({
+		model: MyModel
+	});
+
+	return MyCollection;
 });

@@ -2,18 +2,21 @@
 
 define([
 	'application',
-	'../models/index',
-	'../views/index'
-], function ( App, MyModel, MainView ) {
+	'text!../database_1.json',
+	'../collections/index',
+	'../views/itemsView'
+], function ( App, Database, MyCollection, MyCollectionView ) {
 	"use strict";
 
 	var DefaultController = {
 
 		default: function(param) {
-			var model = new MyModel();
-			var mainView = new MainView({ model: model });
+			var myCollection = new MyCollection();
+			var myCollectionView = new MyCollectionView({ collection: myCollection });
 
-			App.mainRegion.show( mainView );
+			console.log( MyCollectionView );
+
+			App.mainRegion.show( myCollectionView );
 		}
 	};
 

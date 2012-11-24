@@ -1,0 +1,22 @@
+[
+	{
+		"firstName": "Derick",
+		"lastName": "Bailey",
+		"email": "derickbailey@gmail.com"
+	},
+	{
+		"firstName": "Matt",
+		"lastName": "Ma",
+		"email": "mma@adchemy.com"
+	},
+	{
+		"firstName": "Ganesh",
+		"lastName": "Krishnan",
+		"email": "gkrishnam@adchemy.com"
+	},
+	{
+		"firstName": "Jeremy",
+		"lastName": "Anderson",
+		"email": "janderson@adchemy.com"
+	}
+]
