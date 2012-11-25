@@ -8,8 +8,13 @@ define([
 	var MyItemView = new ItemView();
 
 	// Define a view to show
-	var MyCollectionView = Backbone.Marionette.CollectionView.extend({
-		itemView: MyItemView
+	var MyCollectionView = Backbone.Marionette.CompositeView.extend({
+		itemView: MyItemView,
+		itemViewContainer: "#section",
+
+		initialize: function(){
+			this.bindTo(this, "reset", this.render);
+		}
 	});
 
 	return MyCollectionView;

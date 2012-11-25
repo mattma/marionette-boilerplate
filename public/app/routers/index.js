@@ -8,7 +8,8 @@ define([
 	var Router = Backbone.Marionette.AppRouter.extend({
 		appRoutes:{
 			':name': 'details',
-			'*action': 'default'
+			//'*action': 'default'
+			'*action': 'angrycat'
 		},
 		controller: DefaultController
 		// routes: {
