@@ -1,8 +1,9 @@
 define([
 	'backbone',
 	'marionette',
-	'./itemView'
-], function (Backbone, Marionette, ItemView) {
+	'./itemView',
+	'hbs!/app/views/templates/container'
+], function (Backbone, Marionette, ItemView, template) {
 	"use strict";
 
 	var MyItemView = new ItemView();
@@ -10,10 +11,14 @@ define([
 	// Define a view to show
 	var MyCollectionView = Backbone.Marionette.CompositeView.extend({
 		itemView: MyItemView,
-		itemViewContainer: "#section",
+		template: template,
 
 		initialize: function(){
 			this.bindTo(this, "reset", this.render);
+		},
+
+		appendHtml: function(collectionView, itemView){
+			collectionView.$("div").append(itemView.el);
 		}
 	});
 

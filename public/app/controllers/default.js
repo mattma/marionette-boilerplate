@@ -48,11 +48,26 @@ define([
 
 		default: function(param) {
 
-			var myCollectionView = new MyCollectionView({ collection: MyCollection });
+			var myCollection = new MyCollection([
+				new MyModel({
+					"id": "Derick_Bailery",
+					"firstName": "Derick",
+					"lastName": "Bailey",
+					"email": "derickbailey@gmail.com",
+					"details": "He is the creator of Marionette framework."
+				}),
+				new MyModel({
+					"id": "Matt_Ma",
+					"firstName": "Matt",
+					"lastName": "Ma",
+					"email": "mma@adchemy.com",
+					"details": "He is a front end developer."
+				})
+			]);
 
-			console.log( MyCollectionView );
+			var myCollectionView = new MyCollectionView({ collection: myCollection });
 
-			//App.mainRegion.show( myCollectionView  );
+			App.mainRegion.show( myCollectionView  );
 
 			// var myModel = new MyModel();
 			// var myItemView = new MyItemView({ model: myModel });
