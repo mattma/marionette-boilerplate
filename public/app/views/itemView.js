@@ -7,7 +7,8 @@ define([
 
 	// Define a view to show
 	var MainView = Backbone.Marionette.ItemView.extend({
-		template: template
+		template: template,
+		tagName: "p"
 	});
 
 	return MainView;

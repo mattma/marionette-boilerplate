@@ -5,7 +5,7 @@ define([
 
 	var MyModel = Backbone.Model.extend({
 		defaults: {
-			id: 'Derick_Bailey',
+			userId: 'Derick_Bailey',
 			firstName: 'Derick',
 			lastName: 'Bailey',
 			email: 'derickbailey@gmail.com',
