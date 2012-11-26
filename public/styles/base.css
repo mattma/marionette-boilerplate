@@ -392,6 +392,8 @@ form {
 }
 #content span {
   color: rgb(151,151,151);
+  min-width: 280px;
+  margin-left: 25px;
 }
 #content span strong {
   color: black;
