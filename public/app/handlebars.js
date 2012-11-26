@@ -1,5 +1,5 @@
-
 // lib/handlebars/base.js
+
 (function () {
 /*jshint eqnull:true*/
 var Handlebars = {};

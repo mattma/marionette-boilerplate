@@ -7,7 +7,8 @@ define([
 	"use strict";
 
 	App.addRegions({
-		"mainRegion": "#content"
+		"mainRegion": "#content",
+		"formRegion": "#add_user_form"
 	});
 
 	// Initialize this module when the app starts

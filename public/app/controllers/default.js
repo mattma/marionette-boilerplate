@@ -2,15 +2,20 @@ define([
 	'application',
 	'../database',
 	'../views/itemsView',
+	'../views/addUserView',
 	'../views/detailView'
-], function ( App, Payload, MyCollectionView, MyDetailView ) {
+], function ( App, Payload, MyCollectionView, AddUserView, MyDetailView ) {
 	"use strict";
 
 	var DefaultController = {
 
 		default: function(param) {
 			var myCollectionView = new MyCollectionView({ collection: Payload });
+			var addUserView = new AddUserView();
 
+			console.log( Payload.length );
+
+			App.formRegion.show( addUserView  );
 			App.mainRegion.show( myCollectionView  );
 		},
 
@@ -18,6 +23,8 @@ define([
 			var model = Payload.get(param);
 
 			var myDetailView = new MyDetailView({ model: model });
+
+			console.log( Payload.length );
 
 			App.mainRegion.show( myDetailView  );
 		}
