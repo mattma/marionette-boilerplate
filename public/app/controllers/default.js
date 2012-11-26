@@ -13,8 +13,6 @@ define([
 			var myCollectionView = new MyCollectionView({ collection: Payload });
 			var addUserView = new AddUserView();
 
-			console.log( Payload.length );
-
 			App.formRegion.show( addUserView  );
 			App.mainRegion.show( myCollectionView  );
 		},
@@ -24,8 +22,7 @@ define([
 
 			var myDetailView = new MyDetailView({ model: model });
 
-			console.log( Payload.length );
-
+			App.formRegion.close( );
 			App.mainRegion.show( myDetailView  );
 		}
 	};
