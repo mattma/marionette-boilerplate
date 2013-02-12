@@ -5,12 +5,17 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-coffee');
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-jade');
+  grunt.loadNpmTasks('grunt-growl');
 
   grunt.initConfig({
+    server: {
+      port: 3000,
+      base: './app'
+    },
     watch: {
       coffee: {
         files: 'src/**/*.coffee',
-        tasks: 'coffee'
+        tasks: 'stopserver coffee startserver'
       },
       less: {
         files: 'src/public/css/*.less',
@@ -59,4 +64,17 @@ module.exports = function (grunt) {
   });
 
   grunt.registerTask('default', 'coffee less jade');
+  grunt.registerTask('dev', 'startserver watch');
+
+  var cp = require('child_process');
+  var server;
+  grunt.registerTask('startserver', 'Start a web server.', function() {
+    server = cp.spawn('node', ['app/app.js']);
+  });
+
+  grunt.registerTask('stopserver', 'Stop a web server.', function() {
+    if (server) {
+      server.kill();
+    }
+  });
 };
