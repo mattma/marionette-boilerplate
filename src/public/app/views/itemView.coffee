@@ -9,13 +9,12 @@ define [
   # Define a view to show
   MainView = Backbone.Marionette.ItemView.extend(
     template: template
-    tagName: "p"
     events:
-      "click #delete": "removeThisModel"
+      'click #delete': 'removeThisModel'
 
     removeThisModel: (e) ->
       e.preventDefault()
-      userId = $(e.target).attr("data-user")
+      userId = $(e.target).attr('data-user')
       model = new MyModel(id: userId)
       Payload.remove model
   )

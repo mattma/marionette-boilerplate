@@ -7,9 +7,9 @@ define [
   # Define a view to show
   MyCollectionView = Backbone.Marionette.CollectionView.extend(
     itemView: ItemView
-    tagName: "section"
+    className: 'row'
     initialize: ->
-      @listenTo this, "reset", @render
+      @listenTo this, 'reset', @render
   )
   MyCollectionView
 

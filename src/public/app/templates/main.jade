@@ -1,8 +1,4 @@
-a(href='##{firstName}_#{lastName}') View Details
-  span
-    | User Name:
-    strong  #{firstName} #{lastName}
-  span
-    | Email:
-    strong #{email}
-a#delete(href='#delete', data-user='#{firstName}_#{lastName}') Delete
+.span3: a(href='##{firstName}_#{lastName}') View Details
+.span3 User Name: #{firstName} #{lastName}
+.span3 Email: #{email}
+.span3: a#delete(href='#delete', data-user='#{firstName}_#{lastName}') Delete

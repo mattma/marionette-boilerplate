@@ -1,5 +1,6 @@
-input#first_name(type='text', name='first_name', placeholder='first_name')
-input#last_name(type='text', name='last_name', placeholder='last_name')
-input#email(type='email', name='email', placeholder='youremail@example.com')
-input#detail(type='text', name='detail', placeholder='Description')
-input#submit(type='submit', value='Add User')
+.controls.controls-row
+  input#first_name.span2(type='text', name='first_name', placeholder='First Name')
+  input#last_name.span2(type='text', name='last_name', placeholder='Last Name')
+  input#email.span3(type='email', name='email', placeholder='youremail@example.com')
+  input#detail.span3(type='text', name='detail', placeholder='Description')
+  input#submit.span2.btn.btn-success(type='button', value='Add User')
