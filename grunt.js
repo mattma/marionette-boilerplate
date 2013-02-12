@@ -8,10 +8,6 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-growl');
 
   grunt.initConfig({
-    server: {
-      port: 3000,
-      base: './app'
-    },
     watch: {
       coffee: {
         files: 'src/**/*.coffee',
