@@ -1,4 +1,4 @@
-define ["collections/index", "models/index"], (MyCollection, MyModel) ->
+define ["app/collections/index", "app/models/index"], (MyCollection, MyModel) ->
   "use strict"
   Payload = new MyCollection([new MyModel(
     id: "Derick_Bailey"

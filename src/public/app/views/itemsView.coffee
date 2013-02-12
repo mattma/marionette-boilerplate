@@ -1,4 +1,7 @@
-define ["backbone", "marionette", "./itemView"], (Backbone, Marionette, ItemView, template) ->
+define [
+  "backbone", 
+  "Backbone.Marionette", 
+  "app/views/itemView"], (Backbone, Marionette, ItemView) ->
   "use strict"
   
   # Define a view to show
@@ -6,7 +9,7 @@ define ["backbone", "marionette", "./itemView"], (Backbone, Marionette, ItemView
     itemView: ItemView
     tagName: "section"
     initialize: ->
-      @bindTo this, "reset", @render
+      @listenTo this, "reset", @render
   )
   MyCollectionView
 

@@ -1,0 +1,36 @@
+{
+  "name": "jade",
+  "version": "0.0.1-1",
+  "description": "An AMD loader plugin for Jade templates",
+  "keywords": ["jade", "template"],
+
+  "maintainers": [
+    {
+      "name": "Kevin Rockwood",
+      "email": "kevin@rockwood.me",
+      "web": "http://rockwood.me" 
+    }
+  ],
+  
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://www.opensource.org/licenses/mit-license.php"
+    }
+  ],
+  
+  "repositories": [
+    {
+      "type": "git", 
+      "url": "http://github.com/rockwood/jam-jade.git"
+    }
+  ],
+  
+  "github": "http://github.com/rockwood/jam-jade",
+  
+  "main": "index.js",
+
+  "dependencies": {
+    "text": ">= 2.0.0-jam.1"
+  }
+}

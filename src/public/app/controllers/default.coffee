@@ -1,4 +1,4 @@
-define ["application", "../database", "../views/itemsView", "../views/addUserView", "../views/detailView"], (App, Payload, MyCollectionView, AddUserView, MyDetailView) ->
+define ["app/application", "app/database", "app/views/itemsView", "app/views/addUserView", "app/views/detailView"], (App, Payload, MyCollectionView, AddUserView, MyDetailView) ->
   "use strict"
   DefaultController =
     default: (param) ->

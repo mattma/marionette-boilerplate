@@ -1,5 +1,5 @@
 #global $
-define ["backbone", "application", "routers/index"], (Backbone, App, Router) ->
+define ["backbone", "app/application", "app/routers/index"], (Backbone, App, Router) ->
   "use strict"
   App.addRegions
     mainRegion: "#content"

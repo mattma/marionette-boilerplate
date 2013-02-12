@@ -1,4 +1,9 @@
-define ["backbone", "marionette", "../database", "../models/index", "hbs!/app/views/templates/main"], (Backbone, Marionette, Payload, MyModel, template) ->
+define [
+  "backbone", 
+  "Backbone.Marionette", 
+  "app/database", 
+  "app/models/index", 
+  "jade!./templates/main"], (Backbone, Marionette, Payload, MyModel, template) ->
   "use strict"
   
   # Define a view to show

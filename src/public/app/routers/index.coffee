@@ -1,4 +1,4 @@
-define ["backbone", "marionette", "../controllers/default"], (Backbone, Marionette, DefaultController) ->
+define ["backbone", "Backbone.Marionette", "app/controllers/default"], (Backbone, Marionette, DefaultController) ->
   "use strict"
   Router = Backbone.Marionette.AppRouter.extend(
     appRoutes:

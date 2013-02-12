@@ -25,5 +25,18 @@
 
 	"engines": {
 		"node": ">= 0.8.x"
-	}
+	},
+
+  "jam": {
+		"packageDir": "app/public/libs",
+  	"baseUrl": "app/public",
+    "dependencies": {
+    	"backbone": "",
+      "jquery": "1.9.1",
+      "Backbone.Marionette": "",
+      "jade": "",
+      "text": "",
+      "i18n": ""
+    }
+  }
 }

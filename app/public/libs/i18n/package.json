@@ -1,0 +1,6 @@
+{
+    "name": "i18n",
+    "version": "2.0.1-jam.1",
+    "description": "An AMD loader plugin for loading internationalization/localization string resources",
+    "main": "i18n.js"
+}

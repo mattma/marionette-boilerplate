@@ -1,0 +1,8 @@
+a(href='##{firstName}_#{lastName}') View Details
+  span
+    | User Name:
+    strong  #{firstName} #{lastName}
+  span
+    | Email:
+    strong #{email}
+a#delete(href='#delete', data-user='#{firstName}_#{lastName}') Delete
