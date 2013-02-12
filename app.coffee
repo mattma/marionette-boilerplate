@@ -5,7 +5,7 @@ app = module.exports = express()
 
 VIEWS_PATH = __dirname + '/views'
 PUBLIC_PATH = __dirname + '/public'
-PORT = process.env.VMC_APP_PORT or 3002
+PORT = process.env.PORT or 3000
 
 # Configuration
 app.configure( ->

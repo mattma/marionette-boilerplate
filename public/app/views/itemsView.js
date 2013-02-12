@@ -1,19 +1,14 @@
-define([
-	'backbone',
-	'marionette',
-	'./itemView'
-], function (Backbone, Marionette, ItemView, template) {
-	"use strict";
 
-	// Define a view to show
-	var MyCollectionView = Backbone.Marionette.CollectionView.extend({
-		itemView: ItemView,
-		tagName: "section",
+define(["backbone", "marionette", "./itemView"], function(Backbone, Marionette, ItemView, template) {
+  "use strict";
 
-		initialize: function(){
-			this.bindTo(this, "reset", this.render);
-		}
-	});
-
-	return MyCollectionView;
+  var MyCollectionView;
+  MyCollectionView = Backbone.Marionette.CollectionView.extend({
+    itemView: ItemView,
+    tagName: "section",
+    initialize: function() {
+      return this.bindTo(this, "reset", this.render);
+    }
+  });
+  return MyCollectionView;
 });

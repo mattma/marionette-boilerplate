@@ -1,10 +1,8 @@
-define([
-	'backbone',
-	'marionette'
-], function (Backbone, Marionette) {
-	"use strict";
 
-	var App = new Backbone.Marionette.Application();
+define(["backbone", "marionette"], function(Backbone, Marionette) {
+  "use strict";
 
-	return App;
+  var App;
+  App = new Backbone.Marionette.Application();
+  return App;
 });

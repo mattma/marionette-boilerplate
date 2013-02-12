@@ -16,10 +16,12 @@
 	},
 
 	"scripts": {
-		"start": "./server.js"
+		"start": "coffee app.coffee"
 	},
 
-	"devDependencies": {},
+	"devDependencies": {
+		"grunt-coffee" : ""
+	},
 
 	"engines": {
 		"node": ">= 0.8.x"
