@@ -17,7 +17,10 @@ head
   block scripts
     script
       require.config({
-        baseUrl: "/"
+        baseUrl: "/",
+        paths: {
+          jade: 'app/templates/jade'
+        }
       });
 
       require(['app/application', 'app/app'], function(App) { App.start() });

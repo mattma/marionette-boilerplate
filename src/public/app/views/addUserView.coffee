@@ -3,7 +3,7 @@ define [
   "Backbone.Marionette",
   "app/database", 
   "app/models/index",
-  "jade!./templates/addUser"], (Backbone, Marionette, Payload, MyModel, template) ->
+  "app/templates/addUser"], (Backbone, Marionette, Payload, MyModel, template) ->
   "use strict"
   
   # Define a view to show

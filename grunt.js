@@ -7,6 +7,10 @@ module.exports = function (grunt) {
       coffee: {
         files: 'src/**/*.coffee',
         tasks: 'coffee'
+      },
+      jade: {
+        files: 'src/public/app/templates/*.jade',
+        tasks: 'jade'
       }
     },
     coffee: {
@@ -18,9 +22,21 @@ module.exports = function (grunt) {
           base_path: 'src'
         }
       }
+    },
+    jade: {
+      amd: {
+        src: 'src/public/app/templates/*.jade',
+        dest: 'app/public/app/templates',
+        wrapper: {
+          dependencies: 'jade',
+          amd: true
+        }
+      }
     }
   });
 
   grunt.loadNpmTasks('grunt-coffee');
-  grunt.registerTask('default', 'coffee');
+  grunt.loadNpmTasks('grunt-jade');
+
+  grunt.registerTask('default', 'coffee jade');
 };

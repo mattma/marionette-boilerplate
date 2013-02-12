@@ -20,7 +20,8 @@
 	},
 
 	"devDependencies": {
-		"grunt-coffee" : ""
+		"grunt-coffee" : "",
+    "grunt-jade" : ""
 	},
 
 	"engines": {
@@ -34,7 +35,6 @@
     	"backbone": "",
       "jquery": "1.9.1",
       "Backbone.Marionette": "",
-      "jade": "",
       "text": "",
       "i18n": ""
     }
