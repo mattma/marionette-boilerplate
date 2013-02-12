@@ -12,7 +12,7 @@ module.exports = function (grunt) {
     coffee: {
       dist: {
         src: 'src/**/*.coffee',
-        dest: 'public',
+        dest: 'app',
         options: {
           preserve_dirs: true,
           base_path: 'src'
