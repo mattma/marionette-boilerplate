@@ -29,7 +29,7 @@
     "dependencies": {
       "backbone": "",
       "jquery": "1.9.1",
-      "Backbone.Marionette": "",
+      "Backbone.Marionette": "1.0.0-rc2",
       "text": "",
       "i18n": ""
     }
