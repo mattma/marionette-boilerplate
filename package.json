@@ -19,7 +19,8 @@
     "grunt-coffee": "",
     "grunt-jade": "",
     "grunt-contrib-less": "~0.3.2",
-    "grunt-growl": "~0.1.3"
+    "grunt-growl": "~0.1.3",
+    "grunt-contrib-copy" : "*"
   },
   "engines": {
     "node": ">= 0.8.x"

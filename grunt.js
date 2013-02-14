@@ -6,6 +6,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-jade');
   grunt.loadNpmTasks('grunt-growl');
+  grunt.loadNpmTasks('grunt-contrib-copy');
 
   grunt.initConfig({
     watch: {
@@ -20,18 +21,18 @@ module.exports = function (grunt) {
       jade: {
         files: 'src/public/app/templates/*.jade',
         tasks: 'jade'
+      },
+      images: {
+        files: 'src/public/img/**/*',
+        tasks: 'copy'
+      },
+      views: {
+        files: 'src/views/**/*',
+        tasks: 'copy'
       }
     },
     less: {
       development: {
-        files: {
-          "app/public/css/styles.css": "src/public/css/styles.less"
-        }
-      },
-      production: {
-        options: {
-          yuicompress: true
-        },
         files: {
           "app/public/css/styles.css": "src/public/css/styles.less"
         }
@@ -56,10 +57,18 @@ module.exports = function (grunt) {
           amd: true
         }
       }
+    },
+    copy: {
+      dist: {
+        files: {
+          'app/public/img/': 'src/public/img/**',
+          'app/views/': 'src/views/**'
+        }
+      }
     }
   });
 
-  grunt.registerTask('default', 'coffee less jade');
+  grunt.registerTask('default', 'coffee less copy jade');
   grunt.registerTask('dev', 'startserver watch');
 
   var cp = require('child_process');
