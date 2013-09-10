@@ -9,7 +9,7 @@ Follow the steps to start the Marionette Boilerplate project in 2 minutes
 3. Run sudo ./installs.sh ( Installs global dependencies - jamjs and grunt )
 4. npm install ( Install all the dependencies )
 5. jam install ( Install all client side dependencies )
-7. gunt dev
+7. grunt dev
 6. Open your browser and navigate to http://localhost:3000
 
 ## Rough Guide of Directory Structure:
@@ -26,13 +26,9 @@ Follow the steps to start the Marionette Boilerplate project in 2 minutes
 
 ## Features Include
 * Automatic Desktop Notifications when jade, coffescript or less is wrong upon saving (Windows unspported)
-* Automatic restart of node server upon editing and creating coffee files
+* Live reloading upon editing and creating coffee files
 * CoffeScript
 * Automatic pre-compiled jade templates for Backbone views
 * Backbone Marionette
 * Less and Bootstrap
 * Jamjs client side package management
-
-## Known Issues
-Awaiting update for grunt-contrib-watch 0.1.4 do update Gaze dependency as new files added into the src/views and src/public/img are not tracked due to a bug in an older version of Gaze.
-
