@@ -1,9 +1,9 @@
 {
-  "name": "application_name",
-  "description": "",
+  "name": "marionette-boilerplate",
+  "description": "Basic template to get started with maronette based applications.",
   "author": {
-    "name": "",
-    "email": ""
+    "name": "Jonathan Sharratt",
+    "email": "jon.sharratt@red-badger.com"
   },
   "version": "0.0.1",
   "private": true,
@@ -13,21 +13,22 @@
     "jade": "*"
   },
   "scripts": {
-    "start": "coffee app.coffee"
+    "start": "node app/src/app.js"
   },
   "devDependencies": {
-    "grunt-coffee": "",
+    "grunt-contrib-coffee": "",
     "grunt-jade": "",
-    "grunt-contrib-less": "~0.3.2",
-    "grunt-growl": "~0.1.3",
-    "grunt-contrib-copy" : "*"
+    "grunt-contrib-less": "",
+    "grunt-growl": "",
+    "grunt-contrib-copy": "",
+    "grunt-contrib-watch": ""
   },
   "engines": {
     "node": ">= 0.8.x"
   },
   "jam": {
-    "packageDir": "app/public/libs",
-    "baseUrl": "app/public",
+    "packageDir": "app/src/public/libs",
+    "baseUrl": "app/src/public",
     "dependencies": {
       "backbone": "",
       "jquery": "1.9.1",

@@ -1,4 +1,4 @@
 # GET home page.
 
 exports.home = (req, res) ->
-	res.render 'app/index', { title: 'Express' } # index: views/index.jade
+	res.render 'index', { title: 'Express', layout: 'layout.jade' } # index: views/index.jade
