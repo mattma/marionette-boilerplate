@@ -1,6 +1,6 @@
 define [
   "backbone", 
-  "Backbone.Marionette", 
+  "marionette", 
   "app/views/itemView"], (Backbone, Marionette, ItemView) ->
   "use strict"
   

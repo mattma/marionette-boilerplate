@@ -1,6 +1,6 @@
 define [
   "backbone", 
-  "Backbone.Marionette", 
+  "marionette", 
   "app/database", 
   "app/models/index", 
   "app/templates/main"], (Backbone, Marionette, Payload, MyModel, template) ->

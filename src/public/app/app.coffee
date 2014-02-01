@@ -1,18 +1,9 @@
-#global $
-define ["backbone", "app/application", "app/routers/index"], (Backbone, App, Router) ->
+define ["application", "backbone", "app/routers/index"], (App, Backbone, Router) ->
   "use strict"
   App.addRegions
     mainRegion: "#content"
     formRegion: "#add_user_form"
 
-  
-  # Initialize this module when the app starts
   App.addInitializer ->
-    
-    # Backbone.Marionette.TemplateCache.prototype.compileTemplate = function(rawTemplate) {
-    # 	return Handlebars.compile(rawTemplate);
-    # };
     router = new Router()
     Backbone.history.start()
-
-

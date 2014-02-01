@@ -12,15 +12,8 @@ head
 
   link(rel="stylesheet", type="text/css", href="/css/styles.css")
   script(type="text/javascript", src="//localhost:35729/livereload.js")
-  script(type="text/javascript", src="/libs/require.js")
+  script(type="text/javascript", data-main="app/main", src="/libs/requirejs/require.js")
 
   block scripts
     script
-      require.config({
-        baseUrl: "/",
-        paths: {
-          jade: 'app/templates/jade'
-        }
-      });
-
-      require(['app/application', 'app/app'], function(App) { App.start() });
+      require(['application', 'app'], function(App) { App.start(); });

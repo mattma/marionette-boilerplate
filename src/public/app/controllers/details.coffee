@@ -1,10 +1,9 @@
 define [
-  "app/application", 
-  "text!app/database_1.json", 
+  "text!app/database.json", 
   "app/collections/index",
   "app/views/itemsView", 
   "app/models/index", 
-  "app/views/itemView"], (App, Database, MyCollection, MyCollectionView, MyModel, MyItemView) ->
+  "app/views/itemView"], (Database, MyCollection, MyCollectionView, MyModel, MyItemView) ->
   "use strict"
   DetailsController = details: (param) ->
     console.log param + " testing "

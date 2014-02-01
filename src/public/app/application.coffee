@@ -1,4 +1,4 @@
-define ["backbone", "Backbone.Marionette"], (Backbone, Marionette) ->
+define ["backbone", "marionette"], (Backbone, Marionette) ->
   "use strict"
   new Backbone.Marionette.Application()
 

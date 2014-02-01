@@ -1,6 +1,6 @@
 define [
   "backbone", 
-  "Backbone.Marionette", 
+  "marionette", 
   "app/templates/details"], (Backbone, Marionette, template) ->
   "use strict"
   
