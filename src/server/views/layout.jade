@@ -1,0 +1,19 @@
+!!! 5
+include _head
+body
+  .navbar.navbar-inverse.navbar-fixed-top
+    .navbar-inner
+      .container
+        button.btn.btn-navbar(type='button', data-toggle='collapse', data-target='.nav-collapse')
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+        a.brand(href='#') Marionette Boilerplate
+        .nav-collapse.collapse
+          ul.nav
+            li.active
+              a(href='#') Home
+  .container
+    block content
+
+

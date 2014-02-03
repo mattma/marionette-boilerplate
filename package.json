@@ -1,27 +1,29 @@
 {
-	"name": "application_name",
-	"description": "My Test project",
-	"author": {
-		"name": "Matt Ma",
-		"email": "matt@mattmadesign.com"
-	},
-
-	"version": "0.0.1",
-	"private": true,
-
-	"dependencies": {
-		"coffee-script": ">= 1.3.3",
-		"express": ">=3.0",
-		"jade": "*"
-	},
-
-	"scripts": {
-		"start": "./server.js"
-	},
-
-	"devDependencies": {},
-
-	"engines": {
-		"node": ">= 0.8.x"
-	}
+  "name": "marionette-boilerplate",
+  "description": "Basic template to get started with maronette based applications.",
+  "author": {
+    "name": "Jonathan Sharratt",
+    "email": "jon.sharratt@red-badger.com"
+  },
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "coffee-script": ">= 1.3.3",
+    "express": ">=3.0",
+    "jade": "*"
+  },
+  "scripts": {
+    "start": "node app/src/app.js"
+  },
+  "devDependencies": {
+    "grunt-contrib-coffee": "",
+    "grunt-jade": "",
+    "grunt-contrib-less": "",
+    "grunt-growl": "",
+    "grunt-contrib-copy": "",
+    "grunt-contrib-watch": ""
+  },
+  "engines": {
+    "node": ">= 0.8.x"
+  }
 }
