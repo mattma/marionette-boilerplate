@@ -19,28 +19,28 @@ module.exports = function (grunt) {
         }
       },
       less: {
-        files: 'src/public/css/*.less',
+        files: 'src/**/*.less',
         tasks: 'less',
         options: {
           livereload: true
         }
       },
       jade: {
-        files: 'src/public/app/templates/*.jade',
+        files: 'src/client/**/*.jade',
         tasks: 'jade',
         options: {
           livereload: true
         }
       },
       images: {
-        files: 'src/public/img/**/*',
+        files: 'src/img/**/*',
         tasks: 'copy',
         options: {
           livereload: true
         }
       },
       views: {
-        files: 'src/views/**/*',
+        files: 'src/server/views/**/*',
         tasks: 'copy',
         options: {
           livereload: true
@@ -50,7 +50,7 @@ module.exports = function (grunt) {
     less: {
       development: {
         files: {
-          "app/src/public/css/styles.css": "src/public/css/styles.less"
+          "compiled/server/css/styles.css": "src/server/css/styles.less"
         }
       }
     },
@@ -58,15 +58,16 @@ module.exports = function (grunt) {
       glob_to_multiple: {
         expand: true,
         flatten: false,
-        src: ['src/**/*.coffee'],
-        dest: 'app',
+        cwd: 'src',
+        src: ['**/*.coffee'],
+        dest: 'compiled',
         ext: '.js'
       }
     },
     jade: {
       amd: {
-        src: 'src/public/app/templates/*.jade',
-        dest: 'app/src/public/app/templates',
+        src: 'src/client/templates/*.jade',
+        dest: 'compiled/client/templates',
         wrapper: {
           dependencies: 'jade',
           amd: true
@@ -76,8 +77,8 @@ module.exports = function (grunt) {
     copy: {
       dist: {
         files: [
-          { expand: true, flatten: true, src: ['src/public/img/**'], dest: 'app/src/public/img/', filter: 'isFile'},
-          { expand: true, flatten: true, src: ['src/views/**'], dest: 'app/src/views/', filter: 'isFile'}
+          { expand: true, flatten: true, src: ['src/servier/img/**'], dest: 'compiled/server/img/', filter: 'isFile'},
+          { expand: true, flatten: true, src: ['src/server/views/**'], dest: 'compiled/server/views/', filter: 'isFile'}
        ]
       }
     }
@@ -89,7 +90,7 @@ module.exports = function (grunt) {
   var cp = require('child_process');
   var server;
   grunt.registerTask('startserver', 'Start a web server.', function() {
-    server = cp.spawn('node', ['app/src/app.js']);
+    server = cp.spawn('node', ['compiled/server/app.js']);
   });
 
   grunt.registerTask('stopserver', 'Stop a web server.', function() {

@@ -1,11 +1,11 @@
 define [
-  "backbone", 
-  "marionette", 
-  "app/database", 
-  "app/models/index", 
-  "app/templates/main"], (Backbone, Marionette, Payload, MyModel, template) ->
+  "backbone",
+  "marionette",
+  "database",
+  "models/index",
+  "templates/main"], (Backbone, Marionette, Payload, MyModel, template) ->
   "use strict"
-  
+
   # Define a view to show
   MainView = Backbone.Marionette.ItemView.extend(
     template: template

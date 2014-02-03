@@ -1,11 +1,11 @@
 define [
   "backbone", 
   "marionette",
-  "app/database", 
-  "app/models/index",
-  "app/templates/addUser"], (Backbone, Marionette, Payload, MyModel, template) ->
+  "database", 
+  "models/index",
+  "templates/addUser"], (Backbone, Marionette, Payload, MyModel, template) ->
   "use strict"
-  
+
   # Define a view to show
   AddUserView = Backbone.Marionette.ItemView.extend(
     template: template
